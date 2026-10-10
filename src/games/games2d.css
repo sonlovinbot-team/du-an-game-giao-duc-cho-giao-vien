@@ -1,0 +1,678 @@
+.g2-root {
+  --ink: #294d42;
+  --green: #3c715c;
+  color: var(--ink);
+  max-width: 950px;
+  width: 100%;
+  margin: auto;
+  padding: clamp(14px, 3vw, 34px);
+  font-family: inherit;
+}
+.g2-root * {
+  box-sizing: border-box;
+}
+.g2-root button,
+.g2-root input {
+  font: inherit;
+}
+.g2-root button {
+  cursor: pointer;
+  touch-action: manipulation;
+  border: 1px solid #d9dece;
+  background: #fffef7;
+  border-radius: 13px;
+  color: var(--ink);
+  transition:
+    transform 0.15s,
+    background 0.15s,
+    box-shadow 0.15s;
+  min-height: 42px;
+  padding: 10px 18px;
+  font-weight: 650;
+}
+.g2-root button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 0 #d4decc;
+  background: #f4f8e9;
+}
+.g2-root button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+.g2-root button:focus-visible,
+.g2-root input:focus-visible,
+.g2-root svg path:focus-visible {
+  outline: 3px solid #d69c49;
+  outline-offset: 4px;
+}
+.g2-root button:disabled {
+  cursor: default;
+  opacity: 0.45;
+}
+.g2-root .g2-primary {
+  background: #3c715c;
+  color: white;
+  border-color: #3c715c;
+  padding: 13px 25px;
+}
+.g2-root .g2-primary:hover {
+  background: #2d604b;
+}
+.g2-instructions {
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 25px;
+  color: #677467;
+}
+.g2-notice {
+  min-height: 55px;
+  background: #eef2e5;
+  border: 1px solid #dce5d2;
+  border-radius: 12px;
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-top: 22px;
+}
+.g2-scoreline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 13px;
+  margin: 16px auto 22px;
+  max-width: 660px;
+}
+.g2-tag {
+  display: inline-block;
+  border-radius: 30px;
+  background: #e9eedc;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+.g2-actions {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 22px 0 10px;
+  flex-wrap: wrap;
+}
+.g2-root .g2-restart {
+  display: block;
+  margin: 20px auto 0;
+  border: 0;
+  background: transparent;
+  color: #7c8878;
+  font-size: 12px;
+  font-weight: 500;
+}
+.g2-art {
+  width: 230px;
+  display: block;
+  margin: 0 auto 10px;
+}
+.g2-celebration {
+  text-align: center;
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.g2-celebration h2 {
+  font-size: 34px;
+  margin: 15px 0 0;
+}
+.g2-celebration p {
+  max-width: 450px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+.g2-oaq {
+  display: flex;
+  align-items: stretch;
+  background: #f0dbb3;
+  border: 5px solid #bda077;
+  border-radius: 90px;
+  padding: 14px 8px;
+  gap: 6px;
+  max-width: 790px;
+  margin: 35px auto;
+}
+.g2-oaq > div:first-child,
+.g2-oaq > div:last-child {
+  display: flex;
+  flex: 1;
+}
+.g2-pitrows {
+  flex: 5;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.g2-pitrows > div {
+  display: flex;
+  gap: 7px;
+}
+.g2-root .g2-pit {
+  flex: 1;
+  min-width: 0;
+  padding: 7px 5px;
+  border: 2px solid #c6aa7f;
+  background: #f7e8c7;
+  min-height: 95px;
+  border-radius: 17px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 1;
+}
+.g2-pit b {
+  font-size: 13px;
+  color: #89734e;
+}
+.g2-root .g2-pit.g2-own:not(:disabled) {
+  border-color: #769264;
+  background: #fff4d5;
+  box-shadow: 0 3px 0 #bda077;
+}
+.g2-root .g2-pit.g2-king {
+  border-radius: 60px;
+  justify-content: center;
+  gap: 10px;
+}
+.g2-seeds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  gap: 4px;
+  min-height: 48px;
+}
+.g2-seeds i {
+  width: 9px;
+  height: 10px;
+  background: #7d8065;
+  border-radius: 50%;
+  box-shadow: inset 2px 2px 0 #a6a78b;
+}
+.g2-seeds small {
+  font-size: 9px;
+}
+.g2-question {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+.g2-word-illustration {
+  text-align: center;
+  font-size: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.g2-letter-answer,
+.g2-letterbank {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 24px 0;
+}
+.g2-root .g2-letter-answer button,
+.g2-root .g2-letterbank button {
+  width: 49px;
+  height: 55px;
+  padding: 0;
+  font-size: 23px;
+  box-shadow: 0 4px 0 #dce2cd;
+}
+.g2-root .g2-letter-answer button {
+  background: #e8efdf;
+  border: 1px dashed #9aae88;
+  box-shadow: none;
+}
+.g2-letterbank button:disabled {
+  visibility: hidden;
+}
+.g2-memory {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  max-width: 610px;
+  margin: auto;
+}
+.g2-root .g2-memory button {
+  height: 105px;
+  background: #46715e;
+  color: #f6f0c8;
+  border: 3px solid #688770;
+  box-shadow: 0 4px 0 #d8dfcb;
+  font-size: 18px;
+  letter-spacing: 0.01em;
+}
+.g2-memory button > span {
+  font-size: 43px;
+  color: #c2d2ab;
+}
+.g2-root .g2-memory .g2-flipped {
+  background: #fff9e6;
+  border-color: #e8d8ae;
+  color: var(--ink);
+}
+.g2-root .g2-memory .g2-matched {
+  background: #e2ecd7;
+  border-color: #b8cda5;
+}
+.g2-fraction-scene {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+  margin: 20px auto;
+}
+.g2-fraction-scene svg {
+  width: min(48%, 310px);
+  filter: drop-shadow(0 8px 0 #e5e2c9);
+}
+.g2-fraction-scene path {
+  cursor: pointer;
+  transition: fill 0.2s;
+}
+.g2-fraction-scene > div {
+  text-align: center;
+}
+.g2-fraction {
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 54px;
+  line-height: 1.2;
+}
+.g2-fraction b:first-child {
+  border-bottom: 3px solid #3c715c;
+}
+.g2-fraction-scene p {
+  font-size: 13px;
+}
+.g2-rebus {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+  background: #f4edd9;
+  border-radius: 25px;
+  padding: 40px 20px;
+  margin: 22px auto;
+  max-width: 650px;
+}
+.g2-rebus span {
+  font-size: clamp(35px, 7vw, 73px);
+}
+.g2-rebus b {
+  font-size: 26px;
+  color: #baa885;
+}
+.g2-form {
+  max-width: 500px;
+  margin: auto;
+}
+.g2-form label {
+  font-size: 12px;
+  display: block;
+  margin-bottom: 8px;
+}
+.g2-root input {
+  width: 100%;
+  border: 1px solid #cfd8c7;
+  border-radius: 12px;
+  padding: 14px;
+  background: #fffef7;
+  color: var(--ink);
+}
+.g2-hint {
+  text-align: center;
+  background: #fff1cf;
+  padding: 12px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+.g2-maze {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  max-width: 378px;
+  margin: 0 auto;
+  aspect-ratio: 1;
+  border: 8px solid #809969;
+  border-radius: 17px;
+  overflow: hidden;
+  background: #f9ebc9;
+}
+.g2-maze > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+.g2-wall {
+  background: #a4b78b;
+  border-radius: 5px;
+  border: 2px solid #95ad7c;
+}
+.g2-path {
+  background: #f6eacb;
+}
+.g2-dpad {
+  text-align: center;
+  margin: 16px auto;
+}
+.g2-dpad > div {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.g2-root .g2-dpad button {
+  height: 42px;
+  width: 50px;
+  padding: 0;
+  font-size: 22px;
+}
+.g2-xylophone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  background: #e9dfc8;
+  padding: 32px 24px;
+  border-radius: 25px;
+  margin: 35px auto;
+  max-width: 580px;
+  box-shadow: 0 7px 0 #d6ccb6;
+}
+.g2-root .g2-xylophone button {
+  height: var(--bar);
+  background: var(--note);
+  border: 0;
+  min-width: 75px;
+  color: #fff9e8;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px;
+  opacity: 1;
+  box-shadow: 0 6px 0 #b5a486;
+}
+.g2-xylophone button i {
+  width: 8px;
+  height: 8px;
+  background: #fff8dd88;
+  border-radius: 50%;
+}
+.g2-root .g2-xylophone .g2-note-active {
+  background: #fff3a1 !important;
+  transform: translateY(-7px);
+  color: #556448;
+  box-shadow:
+    0 0 0 5px #edd18e,
+    0 10px 15px #a38d5955;
+}
+.g2-sort-item {
+  text-align: center;
+  margin: 15px;
+}
+.g2-sort-item > span {
+  font-size: 74px;
+  display: block;
+  background: #f4ecda;
+  width: 150px;
+  height: 125px;
+  line-height: 125px;
+  border-radius: 50%;
+  margin: auto;
+}
+.g2-sort-item h3 {
+  font-size: 21px;
+  margin: 15px 0;
+}
+.g2-bins {
+  display: flex;
+  justify-content: center;
+  gap: 17px;
+  margin-top: 28px;
+}
+.g2-root .g2-bins button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  max-width: 185px;
+  background: #f9f8ed;
+  border: none;
+  padding: 16px 8px;
+}
+.g2-bin-icon {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 82px;
+  height: 83px;
+  background: var(--bin);
+  border-radius: 6px 6px 17px 17px;
+  font-size: 40px;
+  color: #fff9e1;
+  margin: 12px 0;
+}
+.g2-bin-icon i {
+  position: absolute;
+  top: -9px;
+  left: -6px;
+  right: -6px;
+  height: 8px;
+  background: var(--bin);
+  border-radius: 5px;
+}
+.g2-bins b {
+  font-size: 14px;
+}
+.g2-bins small {
+  color: #89917e;
+  font-size: 11px;
+}
+.g2-sudoku {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 344px;
+  aspect-ratio: 1;
+  margin: 25px auto;
+  border: 3px solid #5c8067;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.g2-root .g2-sudoku button {
+  border-radius: 0;
+  border: 1px solid #d8dfcd;
+  font-size: 27px;
+  padding: 0;
+  background: #fffef7;
+  box-shadow: none;
+  transform: none;
+}
+.g2-root .g2-sudoku button:nth-child(4n + 2) {
+  border-right: 3px solid #5c8067;
+}
+.g2-root .g2-sudoku button:nth-child(n + 5):nth-child(-n + 8) {
+  border-bottom: 3px solid #5c8067;
+}
+.g2-root .g2-sudoku .g2-clue {
+  background: #e7eddc;
+  color: #91a184;
+}
+.g2-root .g2-sudoku .g2-selected {
+  background: #f5d792;
+  color: #4a583b;
+  box-shadow: inset 0 0 0 3px #d4a453;
+}
+.g2-numberpad {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+.g2-chest {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 18px;
+}
+.g2-chest > span {
+  font-size: 66px;
+}
+.g2-sequence {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 28px auto;
+}
+.g2-sequence > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 77px;
+  background: #f4edda;
+  border: 1px solid #e2d8be;
+  border-radius: 14px;
+  font-size: 33px;
+}
+.g2-sequence .g2-missing {
+  border: 2px dashed #a4b58d;
+  background: #edf1e0;
+}
+.g2-options {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+.g2-root .g2-options button {
+  font-size: 29px;
+  min-width: 78px;
+}
+.g2-numberpad button {
+  min-width: 47px;
+}
+@media (max-width: 560px) {
+  .g2-root {
+    padding: 14px 8px;
+  }
+  .g2-instructions {
+    font-size: 12px;
+    margin-bottom: 16px;
+  }
+  .g2-scoreline {
+    font-size: 11px;
+    gap: 6px;
+  }
+  .g2-tag {
+    font-size: 10px;
+    padding: 6px 10px;
+  }
+  .g2-oaq {
+    padding: 8px 5px;
+    border-width: 3px;
+    gap: 3px;
+  }
+  .g2-pitrows > div {
+    gap: 3px;
+  }
+  .g2-root .g2-pit {
+    min-height: 79px;
+    padding: 5px 2px;
+    border-radius: 9px;
+  }
+  .g2-seeds {
+    gap: 2px;
+  }
+  .g2-seeds i {
+    width: 6px;
+    height: 7px;
+  }
+  .g2-memory {
+    gap: 7px;
+  }
+  .g2-root .g2-memory button {
+    height: 88px;
+    padding: 6px;
+    font-size: 14px;
+  }
+  .g2-fraction-scene {
+    gap: 24px;
+  }
+  .g2-fraction {
+    font-size: 42px;
+  }
+  .g2-xylophone {
+    gap: 10px;
+    padding: 25px 10px;
+  }
+  .g2-root .g2-xylophone button {
+    min-width: 54px;
+    font-size: 18px;
+  }
+  .g2-bins {
+    gap: 5px;
+  }
+  .g2-bin-icon {
+    width: 60px;
+    height: 65px;
+  }
+  .g2-bins b {
+    font-size: 11px;
+  }
+  .g2-root .g2-letter-answer button,
+  .g2-root .g2-letterbank button {
+    width: 35px;
+    height: 44px;
+    font-size: 19px;
+    min-height: 0;
+  }
+  .g2-letter-answer,
+  .g2-letterbank {
+    gap: 5px;
+  }
+  .g2-sequence > span {
+    width: 45px;
+    height: 57px;
+    font-size: 25px;
+  }
+  .g2-rebus {
+    gap: 10px;
+    padding: 28px 12px;
+  }
+  .g2-rebus b {
+    font-size: 20px;
+  }
+  .g2-notice {
+    font-size: 12px;
+    padding: 12px;
+  }
+  .g2-maze > div {
+    font-size: 21px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .g2-root * {
+    transition: none !important;
+  }
+}

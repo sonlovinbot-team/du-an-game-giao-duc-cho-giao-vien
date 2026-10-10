@@ -1,0 +1,265 @@
+.g3-game {
+  color: #304b3f;
+  font-family: inherit;
+  width: 100%;
+  background: #faf8ef;
+  border: 1px solid #e4e6d8;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.g3-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 24px 28px 18px;
+}
+.g3-eyebrow {
+  font-size: 10px;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+  color: #7e9276;
+}
+.g3-heading h2 {
+  font-size: 25px;
+  letter-spacing: -0.7px;
+  margin: 7px 0;
+}
+.g3-heading p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 650px;
+  color: #73806e;
+}
+.g3-reset {
+  background: transparent;
+  border: 1px solid #d7ddc9;
+  border-radius: 11px;
+  padding: 10px 15px;
+  color: #537054;
+  font: 600 12px inherit;
+  white-space: nowrap;
+  cursor: pointer;
+  min-height: 44px;
+}
+.g3-progress {
+  height: 4px;
+  background: #e5e9d8;
+}
+.g3-progress span {
+  height: 100%;
+  display: block;
+  background: #80a768;
+  transition: width 0.4s;
+}
+.g3-scene {
+  height: 450px;
+  min-height: 280px;
+  position: relative;
+  background: #edf0df;
+  touch-action: manipulation;
+}
+.g3-scene canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.g3-scene-tag {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+  color: #52664c;
+  background: #fffdf0df;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 7px 10px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.g3-panel {
+  padding: 20px 28px 22px;
+  background: #fffdf7;
+  border-top: 1px solid #e4e6d8;
+}
+.g3-prompt {
+  font-size: 17px;
+  line-height: 1.6;
+  font-weight: 650;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+.g3-prompt > span {
+  font-size: 12px;
+  white-space: nowrap;
+  background: #eff2e5;
+  border-radius: 7px;
+  padding: 3px 10px;
+  align-self: flex-start;
+}
+.g3-control-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.g3-control-row.secondary {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #dbe1cd;
+}
+.g3-choice {
+  min-height: 45px;
+  padding: 10px 16px;
+  border: 1px solid #dce2d0;
+  border-radius: 10px;
+  background: #f8faef;
+  color: #3b5c46;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.16s,
+    border-color 0.16s,
+    transform 0.16s;
+}
+.g3-choice:hover:not(:disabled) {
+  background: #e9f0dc;
+  border-color: #91ac77;
+  transform: translateY(-2px);
+}
+.g3-choice.is-selected {
+  background: #dae9c6;
+  border-color: #729b58;
+  box-shadow: inset 0 0 0 1px #729b58;
+}
+.g3-choice:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+.g3-choice:focus-visible,
+.g3-reset:focus-visible,
+.g3-again:focus-visible {
+  outline: 3px solid #a4c77f;
+  outline-offset: 3px;
+}
+.g3-feedback {
+  min-height: 21px;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #8c7552;
+  margin: 16px 0 0;
+}
+.g3-feedback.success {
+  color: #4d8049;
+  font-weight: 600;
+}
+.g3-again {
+  font: 600 14px inherit;
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 20px;
+  color: white;
+  background: #547b44;
+  margin-top: 12px;
+  cursor: pointer;
+}
+.g3-finished-controls {
+  display: none;
+}
+.g3-fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+}
+.g3-fallback p {
+  max-width: 320px;
+  line-height: 1.7;
+}
+.g3-accessible-scene {
+  font-size: 11px;
+  line-height: 1.6;
+  color: #7a8570;
+  margin: 12px 0 0;
+}
+@media (max-width: 600px) {
+  .g3-heading {
+    padding: 18px 16px;
+    gap: 10px;
+  }
+  .g3-heading h2 {
+    font-size: 21px;
+  }
+  .g3-heading p {
+    font-size: 12px;
+  }
+  .g3-eyebrow {
+    font-size: 8px;
+    letter-spacing: 0.11em;
+  }
+  .g3-reset {
+    font-size: 11px;
+    padding: 9px;
+  }
+  .g3-scene {
+    height: 330px;
+  }
+  .g3-panel {
+    padding: 17px 16px;
+  }
+  .g3-prompt {
+    font-size: 15px;
+  }
+  .g3-choice {
+    padding: 10px 12px;
+    font-size: 12px;
+    flex-grow: 1;
+  }
+  .g3-scene-tag {
+    left: 12px;
+    top: 12px;
+    font-size: 8px;
+  }
+}
+
+.g3-orbit-hint {
+  position: absolute;
+  bottom: 13px;
+  right: 16px;
+  font-size: 10px;
+  color: #556c56;
+  background: #fffdefcf;
+  padding: 7px 10px;
+  border-radius: 6px;
+  pointer-events: none;
+}
+.g3-scene canvas {
+  touch-action: none;
+}
+
+.g3-camera-reset {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+  min-height: 40px;
+  border: 1px solid #d9dfc8;
+  background: #fffdf0df;
+  color: #52664c;
+  border-radius: 7px;
+  padding: 8px 12px;
+  font: 600 11px inherit;
+  cursor: pointer;
+}
+.g3-camera-reset:focus-visible {
+  outline: 3px solid #94b974;
+  outline-offset: 2px;
+}

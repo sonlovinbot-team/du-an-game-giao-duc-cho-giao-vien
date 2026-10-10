@@ -1,0 +1,26 @@
+{
+  "name": "hat-mam",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build",
+    "preview": "vite preview --host 127.0.0.1",
+    "test": "playwright test",
+    "format": "prettier --write src tests *.js *.json index.html docs README.md"
+  },
+  "dependencies": {
+    "@fontsource/nunito-sans": "^5.2.0",
+    "@phosphor-icons/react": "^2.1.10",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.55.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "prettier": "^3.9.9",
+    "vite": "^7.1.0"
+  }
+}

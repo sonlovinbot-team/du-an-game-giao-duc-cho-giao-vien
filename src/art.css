@@ -1,0 +1,19 @@
+.game-art {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  isolation: isolate;
+}
+.game-art text {
+  font-family: inherit;
+}
+.game-art-hero {
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .game-art * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
