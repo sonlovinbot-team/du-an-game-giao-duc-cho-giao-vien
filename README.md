@@ -1,4 +1,6 @@
-# Hạt Mầm
+# Dự án Game giáo dục cho giáo viên
+
+**Tên giao diện:** Hạt Mầm.
 
 Thư viện 20 trò chơi giáo dục tiếng Việt: 10 game 2D xen kẽ 10 game Three.js, dành cho hoạt động trên lớp và học qua trải nghiệm.
 
